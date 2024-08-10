@@ -187,10 +187,15 @@ This tutorial outlines the implementation of on-premises Active Directory within
 </li>
 </ul>
 <h3>Create Additional Users and Log Into Client-1 With One of the Users</h3>
-<p>11. Log in to DC-1 as jane_admin, if not already logged in</p>
-<p>12. Go to Powershell ISE in the search bar and run as administrator</p>
-![image](https://github.com/user-attachments/assets/ca50bfea-c577-4408-942b-11750689f13b)
-<p>13. Create a new File and paste the contents of the script into it <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1"></a></p>
+<p>
+<ul>
+<li>Log in to DC-1 as jane_admin, if not already logged in</li>
+<li>Go to Powershell ISE in the search bar and run as administrator</li>
+<img width="400" alt="ActiveDir_PowerShell" src="https://github.com/user-attachments/assets/90320ecb-18bc-40a9-955d-ae99c928bbca">
+
+
+<li>Create a new File and paste the contents of the script into it <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1"></a></li>  (https://github.com/user-attachments/assets/ca50bfea-c577-4408-942b-11750689f13b)
+</ul>
 
 
 
