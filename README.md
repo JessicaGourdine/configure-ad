@@ -113,12 +113,12 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <li>The VM will restart then log back into DC-1 as user: whateveryourdomainis.com\labuser</li>
 </ul>
 <h3>Create an Admin and Normal User Account in AD</h3>
-<p>8. In the Search box, search for Active Directory Users and Computers </p>
+<p>8. In the Search box, search for Active Directory Users and Computers (ADUC) </p>
 <img width="397" alt="ActiveDir_Users1" src="https://github.com/user-attachments/assets/73b723ee-decf-446e-b6f5-468e7096f25b">
 <ul>
 <li>Select your domain name, right-click and create an Organizational Unit</li>
 <li>Name the Organizational Unit, "_EMPLOYEES"</li>
-<li>Create a new Organizational Unit named "_ADMINS"</li>
+<li>Create a new Organizational Unit (OU) named "_ADMINS"</li>
 </ul>
 <p></p>
 <img width="604" alt="ActiveDir_OU" src="https://github.com/user-attachments/assets/92a44fde-92be-4cb1-a9b7-99ccbaaee237">
@@ -192,10 +192,20 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <li>Log in to DC-1 as jane_admin, if not already logged in</li>
 <li>Go to Powershell ISE in the search bar and run as administrator</li>
 <img width="400" alt="ActiveDir_PowerShell" src="https://github.com/user-attachments/assets/90320ecb-18bc-40a9-955d-ae99c928bbca">
+<p>
+Create a new File and paste the contents of the script into it
+  <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1">PowerShell Script</a>
+</p>
+<li>Run the script and observe the accounts being created</li>
+<p>
+<img width="780" alt="ActiveDir_PowerShell Script" src="https://github.com/user-attachments/assets/631d4064-a15c-4b16-85f0-0d54c07d67b8">
 
+<li>When finished, open ADUC and observe the accounts in the appropriate OU</li>
+</p>![Uploading ActiveDir_EmployeeUpload.png…]()
+<p>
+<li>Attempt to log into Client-1 with one of the accounts. (Take note of the password in the script)</li>
+</p>
 
-<li>Create a new File and paste the contents of the script into it <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1"></a></li>  (https://github.com/user-attachments/assets/ca50bfea-c577-4408-942b-11750689f13b)
-</ul>
 
 
 
