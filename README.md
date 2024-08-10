@@ -30,7 +30,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Deployment and Configuration Steps</h2>
 <h3>Setup Resources in Azure</h3>
-<p>1. Create a Virtual Machine<p>
+<p><h4>Create a Virtual Machine<p></h4>
   <ul>
 <li>Resouce Group Name: AD-Lab</li>
   <li>Virtual Machine Nmae: DC-1</li>
@@ -40,7 +40,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
   </ul>
 <img width="766" alt="ActiveDir_ResourceGroup" src="https://github.com/user-attachments/assets/7905049b-9082-4567-b31d-9c8deaf051fd">
 
-<p>2. Set Domain Controller's NIC Private IP address to be static
+<p><h4>Set Domain Controller's NIC Private IP address to be static<p></h4>
 <ul>
 <li>Once the VM deployment is complete, click Network Settings within your virtual machine</li>
 <li>Click the IP Configuration link</li>
@@ -53,7 +53,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 </ul>
 <p>
 <img width="825" alt="ActiveDir_Static" src="https://github.com/user-attachments/assets/bcbdc985-2f19-4434-97b5-9b32b834909d">
-<p>3. Create the Client VM (Windows 10)</p>
+<p><h4></h4>Create the Client VM (Windows 10)</p><h4></h4>
 <ul>
 <li>Create Virtual Machine and use the same Resource Group and Vnet that was created in Step 1.</li>
 <li>Virtual Machine Name: Client-1</li>
@@ -62,13 +62,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <li>Create</li>
 </ul>
 <h3>Ensure Connectivity Between the Client and Domain Controller</h3>
-<p>4. Copy Client-1's public IP and use it to login to Client-1 with Remote Desktop</p>
+<p><h4>Copy Client-1's public IP and use it to login to Client-1 with Remote Desktop</p></h4>
 <img width="477" alt="ActiveDir_Login1" src="https://github.com/user-attachments/assets/5650ec05-c5d2-4efa-9fdd-eaa7e4c76b0a">
-<p>5. In Client-1 VM, type cmd in the search box and open Command Prompt
+<p><h4>In Client-1 VM, type cmd in the search box and open Command Prompt<p></h4>
 <ul>
 <li>Inside Command Prompt, ping DC-1’s private IP address with ping -t (ip address) It will give a Request Timeout reply
 </li>
-<p>6. Login to DC-1 with Remote Desktop</p>
+<p><h4>Login to DC-1 with Remote Desktop</p></h4>
 <ul>  
 <li>In the search box, type firewall and choose Windows Defender and Firewall Advanced</li>
 </ul>
@@ -88,7 +88,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <p></p>
 <img width="370" alt="ActIveDir_PingReply" src="https://github.com/user-attachments/assets/51fd5ad0-4e07-4d09-a4bb-eb5523594ff0">
 <h3>Install Active Directory</h3>
-<p>7. Inside DC-1, choose Add Roles and Features to begin installing Active Directory</p>
+<p><h4>Inside DC-1, choose Add Roles and Features to begin installing Active Directory</p></h4>
 <img width="345" alt="ActiveDir_AddFeatures" src="https://github.com/user-attachments/assets/ee9d8831-0e93-42c8-869f-a97ae763ffb8">
 <p></p>
 <ul>
@@ -113,7 +113,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <li>The VM will restart then log back into DC-1 as user: whateveryourdomainis.com\labuser</li>
 </ul>
 <h3>Create an Admin and Normal User Account in AD</h3>
-<p>8. In the Search box, search for Active Directory Users and Computers (ADUC) </p>
+<p><h4>In the Search box, search for Active Directory Users and Computers (ADUC)</p></h4>
 <img width="397" alt="ActiveDir_Users1" src="https://github.com/user-attachments/assets/73b723ee-decf-446e-b6f5-468e7096f25b">
 <ul>
 <li>Select your domain name, right-click and create an Organizational Unit</li>
@@ -140,7 +140,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <li>Use jane_admin as your admin account from now on</li>
 </ul>
 <h3>Join Client-1 to your domain</h3>
-<p>9. From the Azure Portal, set Client-1's DNS settings to the DC's Private IP address</p>
+<p><h4>From the Azure Portal, set Client-1's DNS settings to the DC's Private IP address</p></h4>
 <ul>
 <li>In the Azure Portal, go to Virtual Machines -> DC-1 -> Take note of the Private IP address</li>
 <img width="246" alt="ActiveDir_PrivateIP" src="https://github.com/user-attachments/assets/ed8a6d3e-96c7-4b4f-ab8f-3d6a285a3ec5">
@@ -159,8 +159,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <li> Go back to Client-1 and select Restart</li>
 </ul>
 <img width="592" alt="ActiveDir_Restart" src="https://github.com/user-attachments/assets/e54f782a-f336-439c-a150-fd260e3d9e8f">
-<p>10. Log back in to Client-1 (Remote Desktop) with the original credentials and join it to the domain (computer will restart)
-</p>
+<p><h4>Log back in to Client-1 (Remote Desktop) with the original credentials and join it to the domain (computer will restart)
+</p></h4>
 <ul>
 <li>Log back in to Client-1 via Remote Desktop</li>  
 <li>Right-click the start menu -> System -> Rename this PC -> Change</li>
@@ -205,46 +205,4 @@ Create a new File and paste the contents of the script into it
 <p>
 <li>Attempt to log into Client-1 with one of the accounts. (Take note of the password in the script)</li>
 </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-  
-
-    
-
-  
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+<img width="450" alt="ActiveDir_NonAdminLogin" src="https://github.com/user-attachments/assets/b8d1891f-ceba-4e72-a63f-f9d2e064b6bc">
