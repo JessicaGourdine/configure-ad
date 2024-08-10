@@ -206,3 +206,4 @@ Create a new File and paste the contents of the script into it
 <li>Attempt to log into Client-1 with one of the accounts. (Take note of the password in the script)</li>
 </p>
 <img width="450" alt="ActiveDir_NonAdminLogin" src="https://github.com/user-attachments/assets/b8d1891f-ceba-4e72-a63f-f9d2e064b6bc">
+<p><h4>Finished.</h4></p>
